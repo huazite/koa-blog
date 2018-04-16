@@ -1,0 +1,525 @@
+/* 弹出层样式 */
+#settingBox{
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 50px;
+
+    width: 300px;
+    height: calc(100% - 50px);
+    background-color: #fff;
+    z-index: 300;
+}
+#settingBox .s-header{
+    height: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    border-top: 1px solid #fff;
+    background-color: #333744;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+}
+#settingBox .s-content .theme{
+    padding: 10px 0;
+}
+#settingBox .s-content .theme h1{
+    padding: 0 15px;
+    height: 40px;
+    font: 900 16px/40px "Microsoft Yahei";
+    background-color: #efefef;
+}
+#settingBox .s-content .theme .text{
+    padding: 0 15px;
+    margin: 10px 0;
+}
+#settingBox .s-content .theme .togglebar{
+    padding: 0 15px;
+    height: 30px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+#settingBox .s-content .theme .togglebar:last-child{
+    border-bottom: 1px solid #ccc;
+}
+#settingBox .s-content .theme .skin div{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+
+    cursor: pointer;
+    user-select: none;
+}
+#settingBox .s-content .theme .skin div.skin-default{
+    background-color: #333744;
+}
+#settingBox .s-content .theme .skin div.skin-blue{
+    background-color: #1484c7;
+}
+#settingBox .s-content .theme .skin div.skin-yellow{
+    background-color: #ed9e44;
+}
+/* 开关组件 */
+.switchlabel{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid #1AB394;
+    border-radius: 3px;
+}
+.switch{
+    width: 50px;
+}
+.switchinner{
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    -webkit-transition: margin .3s ease-in 0s;
+    transition: margin .3s ease-in 0s;
+}
+.switchinner::before,
+.switchinner::after{
+    display: block;
+    float: left;
+    width: 50%;
+    height: 16px;
+    padding: 0;
+    line-height: 16px;
+    font-size: 10px;
+    font-family: Trebuchet,Arial,sans-serif;
+    font-weight: 700;
+    box-sizing: border-box;
+}
+.switchinner::before{
+    content: "ON";
+    padding-left: 7px;
+    background-color: #1AB394;
+    color: #FFF;
+}
+.switchinner::after{
+    content: "OFF";
+    padding-right: 7px;
+    background-color: #FFF;
+    color: #919191;
+    text-align: right;
+}
+.switchicon{
+    display: block;
+    width: 20px;
+    height: 16px;
+    margin: 0;
+    background: #FFF;
+    border: 2px solid #1AB394;
+    border-radius: 3px;
+    position: absolute;
+    top: -2px;
+    bottom: 0;
+    right: 33px;
+    -webkit-transition: all .3s ease-in 0s;
+    transition: all .3s ease-in 0s;
+}
+
+.switch.on-switch .switchinner{
+    margin-left: 0;
+}
+.switch.on-switch .switchicon{
+    right: -8px;
+}
+#settingBox .s-content .about{
+    margin-top: 60px;
+}
+#settingBox .s-content .about h1{
+    padding: 0 15px;
+    height: 40px;
+    font: 900 16px/40px "Microsoft Yahei";
+    background-color: #efefef;
+}
+#settingBox .s-content .about .text{
+    padding: 0 15px;
+    margin: 10px 0;
+}
+
+
+
+
+
+
+
+
+/* 固定宽度效果 */
+#nav.fix-width,
+.warp.fix-width{
+    margin: 0 auto;
+    width: 1200px;
+}
+
+/* 头部导航 */
+#nav{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background-color: #333744;
+}
+#nav .left a{
+    display: block;
+    float: left;
+    height: 50px;
+    box-sizing: border-box;
+    border-right: 1px solid #000;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+}
+#nav .left a:hover{
+    background-color: #2a2f32;
+}
+#nav .left a.logo,
+#nav .left a#sideBar{
+    width: 50px;
+    font-size: 20px;
+}
+#nav .left a.title{
+    padding: 0 10px;
+    line-height: 50px;
+}
+#nav .right a#settingBar{
+    display: block;
+    float: right;
+    width: 50px;
+    height: 50px;
+
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+/* 主题样式 */
+.warp{
+    width: 100%;
+    height: calc(100% - 50px);
+}
+
+/* 正常宽度样式 */
+#side{
+    float: left;
+    transition: all  0.5s ease-in-out;
+    width: 240px;
+    height: 100%;
+    background-color: #676a6c;
+}
+#side .hidden-avatar{
+    display: none;
+}
+#side .avatar{
+    padding-top: 20px;
+    height: 140px; 
+    text-align: center;
+
+    background-color: #1484c7;
+}
+#side .avatar .imgBox{
+    margin: 0 auto;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+
+    overflow: hidden;
+}
+#side .avatar .imgBox img{
+    width: 100%;
+    height: 100%;
+}
+#side .avatar div#roleInfo{
+    margin-top: 10px;
+    color: #fff;
+
+    cursor: pointer;
+}
+#side .avatar div h1{
+    font-size: 14px;
+}
+#side .avatar div .role{
+    font-size: 12px;
+    color: #eee;
+}
+#side .avatar div .role .roleBox{
+   position: relative;
+   z-index: 100;
+    display: none;
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 150px;
+    background-color: #f5f5f5;
+}
+#side .avatar div .role .roleBox a li{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+}
+#side .avatar div .role .roleBox a:hover li{
+    background-color: #ccc;
+}
+#side .avatar div .role .roleBox a:last-child li{
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
+}
+#side .items .item .side-hidden{
+    display: none;
+}
+#side .items .item a{
+    display: block;
+    padding: 0 10px 0 20px;
+    height: 50px;
+    line-height: 50px;
+    color: #f5f5f5;
+
+    box-sizing: border-box;
+}
+#side .items .item a:hover{
+    background-color: #333744;
+    color: #fff;
+}
+#side .items .item  a.on-show{
+    background-color: #333744;
+    border-left: 2px solid #1AB394;;
+}
+#side .items .item  a.on-show .icon-arrow-right::before{
+	content: '\e904';
+}
+#side .items .item a span{
+    height: 100%;
+}
+#side .items .item a span .item-icon{
+    margin-right: 10px;
+}
+#side .items .item a .item-pull-icon{
+    float: right;
+}
+#side .items .item .item-inner{
+    display: none;
+    box-sizing: border-box;
+    border-left: 2px solid #1AB394;
+}
+#side .items .item .item-inner a{
+    padding-left: 42px;
+    transition: none;
+    color: #ccc;
+    background-color: #333744;
+}
+#side .items .item .item-inner a:hover{
+    color: #fff;
+}
+
+/* 侧边栏收缩布局 */
+#side.hidden{
+    width: 60px;
+}
+#side.hidden .avatar{
+    display: none;
+}
+#side.hidden .hidden-avatar{
+    display: block;
+    height: 60px;
+    background-color: #1484c7;
+
+    font-size: 20px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 60px;
+    color: #fff;
+
+}
+#side.hidden .items .item .side-show{
+    display: none;
+}
+#side.hidden .items .item .side-hidden{
+    display: block;
+    height: 50px;
+
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+
+    color: #ccc;
+    cursor: pointer;
+}
+#side.hidden .items .item .side-hidden:hover{
+    background-color: #333744;
+    color: #fff;
+}
+
+
+
+
+
+
+#main{
+    overflow: hidden;
+    height: 100%;
+    overflow-y: auto;
+}
+#main .topBar{
+    position: relative;
+    height: 40px;
+    background-color: #fff;
+}
+#main .topBar .tobBar-item{
+    display: block;
+    float: left;
+    padding: 0 10px;
+    line-height: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    border-right:  1px solid #e5e5e5;
+}
+#main .topBar .tobBar-item:hover{
+    background-color: #ccc;
+}
+#main .topBar .main-right .tobBar-item:first-child{
+    border-left:  1px solid #e5e5e5;
+}
+#main .topBar #pageTab{
+    margin-left: 35px;
+    height: 40px;
+    line-height: 40px;
+    
+    overflow: hidden;
+}
+#main .topBar #pageTab .pageTab-warp{
+    float: left;
+    width: 200%;
+}
+#main .topBar #pageTab .pageTab-warp ul{
+    display: table;
+}
+#main .topBar .main-left{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#main .topBar .main-right{
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 100;
+
+    background-color: #fff;
+}
+#main .topBar #pageTab .pageTab-warp .homePage{
+    float: left;
+    padding: 0 15px;
+    height: 40px;
+    width: 30px;
+    border-right: 1px solid #e5e5e5;
+    cursor: pointer;
+}
+#main .topBar #pageTab .pageTab-warp .homePage.active{
+    background-color: #333744;
+    color: #fff;
+}
+#main .topBar #pageTab .pageTab-warp .homePage.active:hover{
+    background-color: #333744;
+}
+#main .topBar #pageTab .pageTab-warp .homePage:hover{
+    background-color: #e5e5e5;
+}
+#main .topBar #pageTab ul li{
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    height: 40px;
+
+    border-right: 1px solid #e5e5e5;
+    cursor: pointer;
+}
+#main .topBar #pageTab ul li.active{
+    background-color: #333744;
+    color: #fff;
+}
+#main .topBar #pageTab ul li.active:hover{
+    background-color: #333744;
+}
+#main .topBar #pageTab ul li:hover{
+    background-color: #e5e5e5;
+}
+#main .topBar #pageTab ul li i{
+    display: inline-block;
+    margin-left: 5px;
+}
+#main .topBar #pageTab ul li i:hover{
+    color: red;
+}
+
+#main .topBar .main-right .closeOption{
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 34px;
+    border: 1px solid #f5f5f5;
+    border-top: 1px solid #ccc;
+    width: 120px;
+}
+#main .topBar .main-right .closeOption div{
+    height: 30px;
+
+    text-align: center;
+    line-height: 30px;
+    background-color: #fff;
+    cursor: pointer;
+}
+#main .topBar .main-right .closeOption div:first-child{
+    border-bottom: 1px solid #ccc;
+}
+#main .topBar .main-right .closeOption div:hover{
+    background-color: #e5e5e5;
+}
+
+
+
+
+#main #iframeBox{
+    overflow: hidden;
+    height: calc(100% - 40px);
+}
+#main #iframeBox iframe{
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+#main #iframeBox iframe.active{
+    display: block;
+}
+
+
+
+/* 媒体查询，确定版心 */
+@media (max-width: 768px) {
+    #side.hidden {
+        width: 0;
+    }
+    #nav .title{
+        display: none !important;
+    }
+    #nav .logo{
+        display: none !important;
+    }
+}
+@media (max-width: 992px) {
+    #side.hidden {
+        width:60px;
+    }
+    #nav .title{
+        display: none !important;
+    }
+}

@@ -1,0 +1,124 @@
+@charset "UTF-8";
+/*css 初始化 */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img { margin:0; padding:0; }
+fieldset, img,input,button { border:none; padding:0;margin:0;outline-style:none; } /*去掉input等聚焦时的蓝色边框*/
+ul, ol { list-style:none; }
+input { padding-top:0; padding-bottom:0; font-family: "SimSun","宋体";}
+select, input { vertical-align:middle;}
+select, input, textarea { font-size:12px; margin:0; }
+textarea { resize:none; } /*防止拖动*/
+img {border:0; vertical-align:middle; } /* 去掉图片低测默认的3像素空白缝隙，或者用display：block也可以*/
+table { border-collapse:collapse; }
+html,body{
+	width: 100%;
+	height: 100%;
+}
+body {
+	font:14px/150% 'Microsoft Yahei','Simsun';
+	background:url('../imgs/bg1.png');
+}
+.clearfix:before,.clearfix:after { /*清楚浮动*/
+	content:"";
+	display:table;
+}
+.clearfix:after{clear:both;}
+.clearfix{
+	*zoom:1;/*IE/7/6*/
+}
+a {color:#333; text-decoration:none; transition: all .5s ease; }
+h1,h2,h3,h4,h5,h6 {text-decoration:none;font-weight:normal;font-size:100%;} /*设置h标签的大小，设置跟父亲一样大的字体font-size:100%;*/
+s,i,em{font-style:normal;text-decoration:none;}
+.col-red{color: #C81623!important;}
+/*公共类*/
+.fl {
+	float:left
+}
+.fr {
+	float:right
+}
+.al {
+	text-align:left
+}
+.ac {
+	text-align:center
+}
+.ar {
+	text-align:right
+}
+.hide {
+	display:none
+}
+.show{
+	display: block;
+}
+.font12{ font-size: 12px;}
+.font14{ font-size: 14px;}
+.font16{ font-size: 16px;}
+
+/* 媒体查询，确定版心 */
+@media (max-width: 2000px) {
+    .w {
+		width: 1000px;
+		margin: 0 auto;
+    }
+}
+@media (max-width: 800px) {
+    .w {
+		width: 750px;
+		margin: 0 auto;
+    }
+}
+
+/* 自定义字体图标 */
+@font-face {
+    font-family: 'huazi';
+    src: url('../fonts/MiFie-Website-Font.eot') format('embedded-opentype'), url('../fonts/MiFie-Website-Font.svg') format('svg'), url('../fonts/MiFie-Website-Font.ttf') format('truetype'), url('../fonts/MiFie-Website-Font.woff') format('woff');
+}
+[class^="icon-"],
+[class*=" icon-"] {
+    font-family: huazi !important;
+    font-style: normal;
+    
+}
+.icon-logo::before{
+    content: "\ea3f";
+}
+.icon-tabbar::before{
+	content: '\eaa5';
+}
+.icon-setting::before{
+	content: '\e928';
+}
+.icon-theme::before{
+	content: '\ea83';
+}
+.icon-about::before{
+	content: '\eab3';
+}
+.icon-trigon-down::before{
+	content: '\e904';
+}
+.icon-arrow-right::before{
+	content: '\e906';
+}
+.icon-arrow-down::before{
+	content: '\e904';
+}
+.icon-home::before{
+	content: '\e987';
+}
+.icon-pageLeft::before{
+	content: '\ea3d';
+}
+.icon-pageRight::before{
+	content: '\ea3c';
+}
+.icon-logOut::before{
+	content: '\e913';
+}
+.icon-close::after{
+	content: '\e909';
+}
+.icon-bjey::after{
+	content: '\ea35';
+}
