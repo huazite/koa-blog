@@ -1,0 +1,220 @@
+html,body{
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+#header{
+    height: 80px;
+    width: 100%;
+}
+#header .logo{
+    display: block;
+    float: right;
+    margin-right: 40px;
+}
+#header .icon-logo{
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 80px;
+}
+#main{
+    width: 100%;
+}
+
+
+#main .left{
+    width: 70%;
+}
+#main .left .list{
+    margin: 10px 20px;
+
+}
+#main .left .list .title{
+    text-align: left;
+}
+#main .left .list .title h1{
+    line-height: 40px;
+    font-size: 18px;
+}
+#main .left .list .article-body .info{
+    width: 20%;
+}
+#main .left .list .article-body .article{
+    width: 80%;
+}
+#main .left .list .info .class,
+#main .left .list .info .publish{
+    line-height: 25px;
+    font-size: 12px;
+    color: #999;
+}
+#main .left .list a.blur:hover .class{
+    filter: blur(1px);
+}
+#main .left .list .article-body .article{
+    margin-top: 26px;
+}
+#main .left .list .article-body .article .more{
+   text-align: right;
+   margin: 10px 0;
+}
+#main .left .list .article-body .article .imgBox{
+    width: 100%;
+    height: 200px;
+    margin: 10px 0;
+}
+#main .left .list .article-body .article .imgBox img{
+    transition: all ease .3s;
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+    border-radius: 8px;
+}
+#main .left .list .article-body .article .imgBox img:hover{
+    filter: grayscale(0);
+}
+#main .left .more-articles{
+    text-align: center;
+}
+#main .left .more-articles a{
+    position: relative;
+}
+#main .left .more-articles a::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #3ac19f;
+    visibility: hidden;
+    transform: scaleX(0);
+    
+}
+#main .left .more-articles a:hover::before{
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+
+
+#main .right{
+    width: 30%;
+}
+#main .right.fixed{
+    position: fixed;
+    top: 0;
+}
+#main .right .part{
+    margin: 10px 20px;
+    margin-bottom: 40px;
+}
+#main .right .part h1 span{
+    margin-left: 10px;
+}
+#main .right .part .line{
+    margin: 5px 0;
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+}
+#main .right .part .content li{
+    line-height: 30px;
+}
+#main .right .part .content li span{
+    margin-right: 10px;
+    font-size: 12px;
+    color: #999;
+}
+#main .right .part .content li a{
+    margin-left: 0;
+}
+#main .right .part .content li a:hover{
+    margin-left: 10px;
+}
+#main .right .part.tag .content a{
+    margin: 0 5px;
+    line-height: 30px;
+}
+
+#footer{
+    margin-top: 80px;
+    text-align: right;
+}
+#footer .link{
+    margin-bottom: 10px;
+}
+#footer .link a{
+    transition: none;
+    margin-right: 10px;
+}
+#footer .link a:hover{
+    filter: blur(1px);
+}
+#footer .link a.icon-twitter{
+    margin-left: 20px;
+}
+#toTop{
+    position: fixed;
+    bottom: 10px;
+    right: 40px;
+    padding: 2px 5px;
+    width: 40px;
+    height: 20px;
+    color: #fff;
+
+    background-color: #555;
+    cursor: pointer;
+}
+#toTop span{
+    font-size: 10px;
+}
+#toTop span i{
+    margin-right: 3px;
+}
+
+
+
+/* 媒体查询，确定版心 */
+@media (max-width: 2000px) {
+    .w {
+		width: 1300px !important;
+		margin: 0 auto;
+    }
+}
+@media (max-width: 1500px) {
+    .w {
+		width: 1000px !important;
+		margin: 0 auto;
+    }
+}
+@media (max-width: 1000px) {
+    .w {
+		width: 90% !important;
+		margin: 0 auto;
+	}
+	#header{
+		height: 40px;
+    }
+    #header .icon-logo{
+        line-height: 40px;
+    }
+    #main .left,
+    #main .article{
+        width: 100%;
+    }
+    #main .right,
+    #main .info{
+        width: 0;
+        display: none;
+    }
+    #main .left .list .article-body .article{
+        width: 100%;
+    }
+    #toTop{
+        display: none;
+    }
+}
+
+

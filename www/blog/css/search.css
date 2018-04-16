@@ -1,0 +1,119 @@
+html,body{
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+/* 头部样式 */
+#header{
+    height: 80px;
+    width: 100%;
+}
+#header .link{
+    line-height: 80px;
+}
+#header .link a{
+    transition: none;
+}
+#header .link a:hover{
+    filter: blur(1px);
+}
+#header .link div.fl a{
+    margin-right: 10px;
+}
+#header .link div.fr a{
+    margin-left: 10px;
+}
+#logo{
+    height: 80px;
+    line-height: 80px;
+    font-size: 60px;
+    text-align: center;
+}
+/* 底部样式 */
+#footer{
+    margin-top: 40px;
+    text-align: right;
+}
+#toTop{
+    position: fixed;
+    bottom: 10px;
+    right: 40px;
+    padding: 2px 5px;
+    width: 40px;
+    height: 20px;
+    color: #fff;
+
+    background-color: #555;
+    cursor: pointer;
+}
+#toTop span{
+    font-size: 10px;
+}
+#toTop span i{
+    margin-right: 3px;
+}
+
+
+
+.h1{
+    font-size: 20px;
+}
+.h1 span{
+    color: #009688;
+}
+#main  .list{
+    margin: 10px 20px;
+
+}
+#main  .list .title{
+    text-align: center;
+}
+#main  .list .info{
+    text-align: center;
+}
+#main  .list .title h1{
+    line-height: 40px;
+    font-size: 18px;
+}
+#main  .list .article-body .article{
+    width: 80%;
+    margin: 0 auto;
+}
+#main  .list .info .class,
+#main  .list .info .publish{
+    margin-right: 20px;
+    line-height: 25px;
+    font-size: 12px;
+    color: #999;
+}
+#main  .list a.blur:hover .class{
+    filter: blur(1px);
+}
+
+#main  .list .article-body .article .more{
+   text-align: right;
+   margin: 10px 0;
+}
+#main  .list .article-body .article .imgBox{
+    width: 100%;
+    height: 200px;
+    margin: 10px 0;
+}
+#main  .list .article-body .article .imgBox img{
+    transition: all ease .3s;
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+    border-radius: 8px;
+}
+#main  .list .article-body .article .imgBox img:hover{
+    filter: grayscale(0);
+}
+
+
+@media (max-width: 1000px) {
+    #main  .list .article-body .article{
+        width: 100%;
+    }
+}

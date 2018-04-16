@@ -1,0 +1,109 @@
+html,body{
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+/* 头部样式 */
+#header{
+    height: 80px;
+    width: 100%;
+}
+#header .link{
+    line-height: 80px;
+}
+#header .link a{
+    transition: none;
+}
+#header .link a:hover{
+    filter: blur(1px);
+}
+#header .link div.fl a{
+    margin-right: 10px;
+}
+#header .link div.fr a{
+    margin-left: 10px;
+}
+#logo{
+    height: 80px;
+    line-height: 80px;
+    font-size: 60px;
+    text-align: center;
+}
+/* 底部样式 */
+#footer{
+    margin-top: 40px;
+    text-align: right;
+}
+#toTop{
+    position: fixed;
+    bottom: 10px;
+    right: 40px;
+    padding: 2px 5px;
+    width: 40px;
+    height: 20px;
+    color: #fff;
+
+    background-color: #555;
+    cursor: pointer;
+}
+#toTop span{
+    font-size: 10px;
+}
+#toTop span i{
+    margin-right: 3px;
+}
+
+
+#main{
+    position: relative;
+    width: 50%;
+    padding: 20px 0;
+    margin: 0 auto;
+}
+#main h1{
+    font-size: 24px;
+    font-weight: 900;
+    margin: 30px 0;
+}
+#main .list{
+    margin: 0 auto;
+}
+#main .list h4{
+    font-size: 18px;
+    font-weight: 700;
+    margin: 15px 0;
+    margin-top: 30px;
+}
+#main .list ul{
+    margin-left: 50px;
+}
+#main .list ul li{
+    margin: 5px 0;
+    list-style: circle;
+    font-size: 15px;
+}
+#main .list ul li a{
+    color: #009688;
+    line-height: 25px;
+}
+#main .list ul li span{
+    margin-left: 5px;
+    font-size: 12px;
+    color: #ccc;
+}
+
+/* 媒体查询，确定版心 */
+@media (max-width: 1000px) {
+   
+	#header{
+		height: 40px;
+    }
+    #header .link{
+        line-height: 40px;
+    }
+    #main{
+        width: 90%;
+    }
+  
+}

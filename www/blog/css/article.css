@@ -1,0 +1,341 @@
+html,body{
+    margin:0;
+    height: auto;
+}
+@supports (height: 100vh) {	
+    body{	
+        background: linear-gradient(to right top, #0089f2 50%, #DDD 50%);
+        background-size: 100% calc(100% - 100vh + 2px);
+        background-repeat: no-repeat;
+    }
+
+    body:before{
+        content:'';
+        position: fixed;
+        top: 2px;
+        bottom: 0;
+        width: 100%;
+        z-index: -1;
+        background: white;
+    }
+}
+#header{
+    height: 80px;
+    width: 100%;
+}
+#header .link{
+    line-height: 80px;
+}
+#header .link a{
+    transition: none;
+}
+#header .link a:hover{
+    filter: blur(1px);
+}
+#header .link div.fl a{
+    margin-right: 10px;
+}
+#header .link div.fr a{
+    margin-left: 10px;
+}
+#logo{
+    height: 80px;
+    line-height: 80px;
+    font-size: 60px;
+    text-align: center;
+}
+#main{
+    position: relative;
+    width: 75%;
+    padding: 20px 0;
+    padding-right: 240px;
+    margin: 0 auto;
+}
+#main .navList{
+    padding: 0 15px;
+    position: absolute;
+    top: 60px;
+    right: 0 ;
+    width: 220px;
+    box-sizing: border-box;
+    border-left: 1px solid #eee;
+}
+#main .navList.fix{
+    position: fixed;
+    top: 10px;
+}
+#main .navList ul{
+    padding-left: 18px;
+    margin: 0;
+    list-style-type: square;
+}
+#main .navList ul li.active {
+    color: #009688;
+}
+#main .navList ul li a {
+    display: block;
+    padding: 3px 0;
+    color: #000;
+}
+#main .navList ul li.active a {
+    color: #009688;
+}
+#main .article h1{
+    font-size: 25px;
+    line-height: 40px;
+}
+#main .article .info{
+    margin-bottom: 20px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #999;
+}
+#main .article .info a{
+    margin-left: 20px;
+    transition: none;
+    font-size: 12px;
+    color: #999;
+}
+#main .article .info a:hover{
+    filter: blur(1px);
+}
+#main .relate{
+    margin-top: 30px;
+}
+#main .relate .tag a{
+    position: relative;
+    margin-right: 10px;
+}
+#main .relate .tag a::before{
+    content: "";
+   position: absolute;
+   bottom: 0;
+   left: 0;
+
+   width: 100%;
+   height: 1px;
+   background-color: #009688;
+   transform: scaleX(0);
+}
+#main .relate .tag a:hover::before{
+    transform: scaleX(1);
+}   
+#main .relate .line{
+    margin-top: 10px;
+    height: 1px;
+    background-color: #ccc;
+}
+#main .relate .next-prev{
+    line-height: 30px;
+}
+#main .relate .next-prev .prev .icon-prev{
+    display: inline-block;
+    transform: rotateY(180deg);
+}
+#main .comments{
+    margin-top: 20px;
+}
+#main .comments .header span{
+    margin-right: 5px;
+}
+#main .comments .list{
+    margin-left: 30px;
+    padding: 15px 5px;
+    border-left: 1px solid #ccc;
+}
+#main .comments .list:hover{
+    background-color: #fbfbfb;
+}
+#main .comments > .list{
+    margin-top: 20px;
+    margin-left: 0;
+}
+#main .comments .list .avatar{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+#main .comments .list .avatar img{
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+}
+#main .comments .list .avatar:hover img{
+    filter: grayscale(0);
+}
+#main .comments .list .message .msg-title{
+    margin-left: 10px;
+    height: 40px;
+    line-height: 40px;
+}
+#main .comments .list .message .msg-title span{
+    font-size: 12px;
+    color: #999;
+}
+#main .comments .list .message .msg-title .reply{
+    display: none;
+    font-size: 12px;
+    padding: 0 5px;
+    border-radius: 2px;
+    background-color: #555;
+    color: #eee;
+}
+#main .comments .list:hover .message .msg-title .reply{
+    display: inline;
+}
+#main .comments .list .message .msg-body{
+    margin-left: 10px;
+}
+#main .comments .forcomment{
+    margin-top: 40px;
+
+    position: relative;
+}
+#main .comments .forcomment .line{
+    margin-bottom: 20px;
+    height: 1px;
+    border-top: 1px dashed #ccc;
+}
+#main .comments .forcomment button#forcomment{
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    margin-left: -120px;
+    width: 240px;
+    height: 30px;
+    background-color: #fff;
+
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+#main .comments .commentform{
+    width: 60%;
+    margin: 0 auto;
+}
+#main .comments .commentform h1{
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+}
+#main .comments .commentform label{
+    margin: 20px 0;
+    padding: 2px  10px;
+    display: block;
+   background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+#main .comments .commentform label input{
+    width: 80%;
+    height: 24px;
+    font-size: 16px;
+    line-height: 16px;
+}
+#main .comments .commentform textarea{
+    width: 100%;
+    box-sizing: border-box;
+    height: 120px;
+    font-size: 14px;
+    line-height: 20px;
+    border: 0px solid rgba(0, 0, 0, .05);
+    padding: 10px 15px;
+    border-radius: 3px;
+    background: #f5f5f5;
+    font-family: -apple-system, "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+}
+#main .comments .commentform textarea:focus{
+    outline: none;
+}
+#main .comments .commentform .subbox{
+    margin: 5px 10px;
+    text-align: center;
+}
+#main .comments .commentform .subbox button{
+    padding: 2px 10px;
+    width: 40%;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #fdfdfd;
+    cursor: pointer;
+}
+#main .comments .commentform .subbox button:hover{
+    background-color: #fafafa;
+}
+#main .comments .commentform .subbox button:first-child{
+    margin-right: 20px;
+}
+
+
+
+#footer{
+    margin-top: 40px;
+    text-align: right;
+}
+
+#toTop{
+    position: fixed;
+    bottom: 10px;
+    right: 40px;
+    padding: 2px 5px;
+    width: 40px;
+    height: 20px;
+    color: #fff;
+
+    background-color: #555;
+    cursor: pointer;
+}
+#toTop span{
+    font-size: 10px;
+}
+#toTop span i{
+    margin-right: 3px;
+}
+
+
+
+
+.w {
+    width: 90% !important;
+    margin: 0 auto;
+}
+/* 媒体查询，确定版心 */
+@media (max-width: 1000px) {
+   
+	#header{
+		height: 40px;
+    }
+    #header .link{
+        line-height: 40px;
+    }
+    #main{
+        width: 80%;
+        padding-right: 0 !important;
+    }
+    #main .navList{
+        display: none;
+    }
+    #logo{
+        display: none;
+    }
+    #main .comments .commentform {
+        width: 90%;
+        margin: 0 auto;
+    }
+    #main .comments .list .message{
+        width: 75%;
+        display: inline-block;
+    }
+    #main .comments .list .message .msg-title span{
+        display: none;
+    }
+}
+
+
