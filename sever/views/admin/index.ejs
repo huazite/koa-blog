@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/admin/css/base.css">
+    <link rel="stylesheet" href="/admin/css/index.css">
+    <title>后台界面</title>
+</head>
+<body>
+    <div id="settingBox">
+       <div class="s-header">设置选项</div>
+       <div class="s-content">
+            <div class="theme">
+                <h1>
+                    <i class="icon-theme"></i>
+                    <span>主题设置</span> 
+                </h1>
+                <div class="text">
+                    你可以从这里选择和预览主题的布局和样式，这些设置会被保存在本地，下次打开的时候会直接应用这些设置。
+                </div>
+                <div class="togglebar">
+                    <div class="left fl">收起左部菜单</div>
+                    <div class="switch fr">
+                        <input type="checkbox" class="switchinput" name="toggleSide" id="toggleSide" style="display:none;">
+                        <label class="switchlabel" for="toggleSide">
+                            <span class="switchinner"></span>
+                            <span class="switchicon"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="togglebar">
+                    <div class="left fl">固定宽度</div>
+                    <div class="switch fr">
+                        <input type="checkbox" class="switchinput" name="fixWidth" id="fixWidth" style="display:none;">
+                        <label class="switchlabel" for="fixWidth">
+                            <span class="switchinner"></span>
+                            <span class="switchicon"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="skin">
+                    <div class="skin-default">
+                        默认皮肤
+                    </div>
+                    <div class="skin-blue">
+                        静谧深蓝
+                    </div>
+                    <div class="skin-yellow">
+                       魅力雅黄
+                    </div>
+                </div>
+            </div>
+
+            <div class="about">
+                <h1>
+                    <i class="icon-about"></i>
+                    <span>关于</span> 
+                </h1>
+                <div class="text">
+                    <h2>huazite后台管理系统1.0版</h2>
+                    <h3>&copy;2018 <a href="#">www.huazite.cn</a> 版权所有</h3>
+                </div>
+            </div>
+       </div>
+    </div>
+    <nav id="nav">
+        <div class="left fl">
+            <a href="#" class="logo">
+                <i class="icon-logo"></i>
+            </a>
+            <a href="#" class="title">
+                <i class="title">管理控制台</i>
+            </a>
+            <a href="javascript:;" id="sideBar">
+                <i class="icon-tabbar"></i>
+            </a>
+        </div>
+        <div class="right fr">
+            <a href="javascript:;" id="settingBar">
+                <i class="icon-setting"></i>
+            </a>
+        </div>
+    </nav>
+    <div class="warp">
+        <div id="side" class="">
+            <div class="avatar">
+                <div class="imgBox">
+                    <img src="/admin/imgs/avatar.jpg" alt="">
+                </div>
+               <div id="roleInfo">
+                    <h1>huazite</h1>
+                    <div class="role">
+                        <span>超级管理员<i class="icon-trigon-down "></i></span>
+                        <ul class="roleBox">
+                            <a href="#"><li>修改头像</li></a>
+                            <a href="#"><li>个人资料</li></a>
+                            <a href="#"><li>安全退出</li></a>
+                        </ul>
+                    </div>
+               </div>
+            </div>
+            <div class="hidden-avatar icon-logo"></div>
+            <ul class="items">
+                <li class="item">
+                    <div class="side-show">
+                        <a class="item-a" href="javascript:;" class="clearfix"> <span class="fl"><i class="item-icon icon-home"></i>博客系统</span> <i class="fr item-pull-icon icon-arrow-right"></i></a>
+                        <div class="item-inner">
+                            <!-- <a data-name="所有文章" href="/allArticles">所有文章</a> -->
+                            <a data-name="文章界面" href="/newArticle">文章界面</a>
+                        </div>
+                    </div>
+                    <div class="side-hidden icon-home"></div>
+                </li>
+            
+            </ul>
+        </div>
+        <div id="main">
+            <div class="topBar">
+                <a  href="javascript:;" class="tobBar-item main-left" id="pageLeft"><i class="icon-pageLeft"></i></a>
+                <div href="javascript:;" class="" id="pageTab">
+                    <div class="pageTab-warp">
+                        <div class="homePage active">主页</div>
+                        <ul>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="main-right">
+                    <a href="javascript:;" class="tobBar-item" id="pageRight"><i class="icon-pageRight"></i></a>
+                    <a href="javascript:;" class="tobBar-item" id="pageClose">关闭选项<i class="icon-arrow-down"></i></a>
+                    <a href="javascript:;" class="tobBar-item" id="logOut"><i class="icon-logOut"></i>退出</a>
+                    <div class="closeOption">
+                        <div>关闭当前页面</div>
+                        <div>关闭其它页面</div>
+                        <div>关闭全部页面</div>
+                    </div> 
+                </div>
+            </div>
+            <div id="iframeBox">
+                <iframe class="active pageHome" data-id="homepage" src="/allArticles" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="/admin/lib/jquery/jquery.js"></script>
+<script src="/admin/lib/layui/layui.js"></script>
+<script src="/admin/js/index.js"></script>
+<script>
+    //初始化使用的框架
+    layui.use(['layer'], function(){
+        var layer = layui.layer;
+    });
+</script>
